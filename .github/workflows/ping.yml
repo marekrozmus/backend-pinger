@@ -12,7 +12,7 @@ jobs:
       - name: Ping Render backend
         run: |
           echo "Pinging backend..."
-          RESPONSE=$(curl -sS -w "%{http_code}" -o /dev/null -A "Mozilla/5.0" https://next-planning-poker.onrender.com/)
+          RESPONSE=$(curl -sS -w "%{http_code}" -o /dev/null -A "Mozilla/5.0" https://next-planning-poker.onrender.com/health/)
           echo "HTTP response code: $RESPONSE"
 
           if [ "$RESPONSE" -ne 200 ]; then
