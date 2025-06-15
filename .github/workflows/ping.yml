@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Ping backend
-        run: curl -s https://next-planning-poker.onrender.com/health
+        run: curl -sSA "Mozilla/5.0" https://next-planning-poker.onrender.com/
